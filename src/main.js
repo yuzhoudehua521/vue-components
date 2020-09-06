@@ -5,11 +5,14 @@ import App from './App.vue'
 import TIcon from './assets/fonts/fonts'
 import TButton from './components/button.vue'
 import TButtonGroup from './components/button-group.vue'
+import TInput from './components/input.vue'
 
 
 Vue.component('t-icon', TIcon)
 Vue.component('t-button', TButton)
 Vue.component('t-button-group', TButtonGroup)
+Vue.component('t-input', TInput)
+
 
 import './assets/fonts/fonts.css'
 import './assets/styles/style.css'

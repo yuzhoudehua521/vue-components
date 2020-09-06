@@ -1,34 +1,34 @@
 <template>
   <div class="g-button-group">
-      <slot></slot> 
+    <slot></slot>
   </div>
 </template>
 
 <script>
 export default {
-    mounted() {
-        for(let node of this.$el.children) {
-            console.log(node)
-        }
+  mounted() {
+    for (let node of this.$el.children) {
+      console.log(node);
     }
-}
+  },
+};
 </script>
 
-<style lang='scss'>
+<style lang="scss" scoped>
 .g-button-group {
-    display: inline-flex;
-    vertical-align: middle;
-    >   .g-button {
-        border-radius: 0;
-        margin-left: -1px;
-        &:first-child {
-            border-top-left-radius: var(--border-radius);
-            border-bottom-left-radius: var(--border-radius);
-        }
-        &:last-child {
-            border-top-right-radius: var(--border-radius);
-            border-bottom-right-radius: var(--border-radius);
-        }
+  display: inline-flex;
+  vertical-align: middle;
+  > .g-button {
+    border-radius: 0;
+    margin-left: -1px;
+    &:first-child {
+      border-top-left-radius: var(--border-radius);
+      border-bottom-left-radius: var(--border-radius);
     }
+    &:last-child {
+      border-top-right-radius: var(--border-radius);
+      border-bottom-right-radius: var(--border-radius);
+    }
+  }
 }
 </style>
