@@ -22,6 +22,38 @@
     <t-input value="李四" error="至少2个字符"></t-input>
     <t-input v-model="msg"></t-input>
     <p>{{msg}}</p>
+
+    <t-row>
+      <t-col span="22">1</t-col>
+      <t-col span="2">2</t-col>
+    </t-row>
+    <t-row>
+      <t-col span="5" offset="1">1</t-col>
+      <t-col span="10">2</t-col>
+      <t-col span="5">3</t-col>
+    </t-row>
+    <t-row gutter="40">
+      <t-col>1</t-col>
+      <t-col span="15">2</t-col>
+    </t-row>
+
+    <t-row class="topbar">
+      <t-col span="9">
+        <t-row align="center">
+          <t-col>1</t-col>
+          <t-col>2</t-col>
+          <t-col>3</t-col>
+          <t-col>4</t-col>
+        </t-row>
+      </t-col>
+      <t-col span="15"></t-col>
+    </t-row>
+
+    <t-row>
+      <t-col span="10" :phone="{span:8}" :ipad="{span:4}">1</t-col>
+      <t-col span="10" :phone="{span:8}" :ipad="{span:10}">2</t-col>
+      <t-col span="4" :phone="{span:8}" :ipad="{span:10}">3</t-col>
+    </t-row>
   </div>
 </template>
 

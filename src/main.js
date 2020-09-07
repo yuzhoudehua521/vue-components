@@ -1,24 +1,26 @@
-import Vue from 'vue'
-import App from './App.vue'
+import Vue from "vue";
+import App from "./App.vue";
 
 //全局使用组件
-import TIcon from './assets/fonts/fonts'
-import TButton from './components/button.vue'
-import TButtonGroup from './components/button-group.vue'
-import TInput from './components/input.vue'
+import Icon from "./assets/fonts/fonts";
+import Button from "./components/button.vue";
+import ButtonGroup from "./components/button-group.vue";
+import Input from "./components/input.vue";
+import Col from "./components/col.vue";
+import Row from "./components/row.vue";
 
+Vue.component("t-icon", Icon);
+Vue.component("t-button", Button);
+Vue.component("t-button-group", ButtonGroup);
+Vue.component("t-input", Input);
+Vue.component("t-col", Col);
+Vue.component("t-row", Row);
 
-Vue.component('t-icon', TIcon)
-Vue.component('t-button', TButton)
-Vue.component('t-button-group', TButtonGroup)
-Vue.component('t-input', TInput)
+import "./assets/fonts/fonts.css";
+import "./assets/styles/style.css";
 
-
-import './assets/fonts/fonts.css'
-import './assets/styles/style.css'
-
-Vue.config.productionTip = false
+Vue.config.productionTip = false;
 
 new Vue({
-  render: h => h(App),
-}).$mount('#app')
+  render: (h) => h(App),
+}).$mount("#app");
