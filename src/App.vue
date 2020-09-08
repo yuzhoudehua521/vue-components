@@ -25,7 +25,7 @@
     <t-input v-model="msg"></t-input>
     <p>{{msg}}</p>-->
 
-    <t-row>
+    <!-- <t-row>
       <t-col span="22">1</t-col>
       <t-col span="2">2</t-col>
     </t-row>
@@ -55,9 +55,10 @@
       <t-col span="10" :phone="{span:8}" :ipad="{span:4}">1</t-col>
       <t-col span="10" :phone="{span:8}" :ipad="{span:10}">2</t-col>
       <t-col span="4" :phone="{span:8}" :ipad="{span:10}">3</t-col>
-    </t-row>
+    </t-row>-->
 
-    <t-layout>
+    <!-- layout -->
+    <!-- <t-layout>
       <t-header>header</t-header>
       <t-content>content</t-content>
       <t-footer>footer</t-footer>
@@ -79,7 +80,9 @@
         <t-content>content</t-content>
         <t-footer>footer</t-footer>
       </t-layout>
-    </t-layout>
+    </t-layout>-->
+
+    <button @click="showToast">点我</button>
   </div>
 </template>
 
@@ -98,6 +101,12 @@ export default {
     },
     inputChange(e) {
       console.log(e.target.value);
+    },
+    //使用toast组件
+    showToast() {
+      this.$toast("toast插件被调用了toast插件被调用了toast插件被调用了", {
+        position: "middle",
+      });
     },
   },
 };

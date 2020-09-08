@@ -13,6 +13,7 @@ import Header from "./components/layout/header.vue";
 import Content from "./components/layout/content.vue";
 import Sider from "./components/layout/sider.vue";
 import Footer from "./components/layout/footer.vue";
+import Toast from "./components/toast.vue";
 
 Vue.component("t-icon", Icon);
 Vue.component("t-button", Button);
@@ -25,6 +26,11 @@ Vue.component("t-header", Header);
 Vue.component("t-content", Content);
 Vue.component("t-sider", Sider);
 Vue.component("t-footer", Footer);
+Vue.component("t-toast", Toast);
+
+// 插件使用
+import plugin from "./plug/plug";
+Vue.use(plugin);
 
 import "./assets/fonts/fonts.css";
 import "./assets/styles/style.css";
