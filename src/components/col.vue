@@ -93,24 +93,8 @@ export default {
       margin-right: ($n / 24) * 100%;
     }
   }
-  @media (max-width: 576px) {
-    $class: col-phone-;
-    @for $n from 1 through 24 {
-      // col-1
-      &.#{$class}#{$n} {
-        width: ($n / 24) * 100%;
-      }
-    }
-    //偏移
-    $class: offset-phone-;
-    @for $n from 1 through 24 {
-      // offset-1
-      &.#{$class}#{$n} {
-        margin-right: ($n / 24) * 100%;
-      }
-    }
-  }
-  @media (min-width: 577px) and (max-width: 768px) {
+  // 移动端优先
+  @media (min-width: 576px) {
     $class: col-ipad-;
     @for $n from 1 through 24 {
       // col-1
@@ -127,7 +111,7 @@ export default {
       }
     }
   }
-  @media (min-width: 769px) and (max-width: 992px) {
+  @media (min-width: 768px) {
     $class: col-narrowPC-;
     @for $n from 1 through 24 {
       // col-1
@@ -144,7 +128,7 @@ export default {
       }
     }
   }
-  @media (min-width: 993px) and (max-width: 1200px) {
+  @media (min-width: 992px) {
     $class: col-PC-;
     @for $n from 1 through 24 {
       // col-1
@@ -161,7 +145,7 @@ export default {
       }
     }
   }
-  @media (min-width: 1201px) {
+  @media (min-width: 1200px) {
     $class: col-wide-;
     @for $n from 1 through 24 {
       // col-1
@@ -171,6 +155,23 @@ export default {
     }
     //偏移
     $class: offset-wide-;
+    @for $n from 1 through 24 {
+      // offset-1
+      &.#{$class}#{$n} {
+        margin-right: ($n / 24) * 100%;
+      }
+    }
+  }
+  @media (min-width: 1201px) {
+    $class: col-extra-;
+    @for $n from 1 through 24 {
+      // col-1
+      &.#{$class}#{$n} {
+        width: ($n / 24) * 100%;
+      }
+    }
+    //偏移
+    $class: offset-extra-;
     @for $n from 1 through 24 {
       // offset-1
       &.#{$class}#{$n} {

@@ -1,6 +1,7 @@
 <template>
   <div id="app">
-    <button @click="clickTo">点击</button>
+    <!-- button -->
+    <!-- <button @click="clickTo">点击</button>
     <t-button iconname="icon-xia" v-show="show" @click="show = !show">设置</t-button>
     <t-button iconname="icon-dianzan" icon-position ref="child">点赞</t-button>
     <t-button iconname="icon-shezhi" icon-position></t-button>
@@ -14,14 +15,15 @@
       <t-button iconname="icon-zuo">上一页</t-button>
       <t-button>更多</t-button>
       <t-button iconname="icon-you" icon-position="right">下一页</t-button>
-    </t-button-group>
+    </t-button-group>-->
 
-    <t-input value="李四" @change="inputChange"></t-input>
+    <!-- input -->
+    <!-- <t-input value="李四" @change="inputChange"></t-input>
     <t-input value="张三" disabled></t-input>
     <t-input value="李四"></t-input>
     <t-input value="李四" error="至少2个字符"></t-input>
     <t-input v-model="msg"></t-input>
-    <p>{{msg}}</p>
+    <p>{{msg}}</p>-->
 
     <t-row>
       <t-col span="22">1</t-col>
@@ -54,6 +56,30 @@
       <t-col span="10" :phone="{span:8}" :ipad="{span:10}">2</t-col>
       <t-col span="4" :phone="{span:8}" :ipad="{span:10}">3</t-col>
     </t-row>
+
+    <t-layout>
+      <t-header>header</t-header>
+      <t-content>content</t-content>
+      <t-footer>footer</t-footer>
+    </t-layout>
+
+    <t-layout>
+      <t-header>header</t-header>
+      <t-layout>
+        <t-sider>sider</t-sider>
+        <t-content>content</t-content>
+      </t-layout>
+      <t-footer>footer</t-footer>
+    </t-layout>
+
+    <t-layout>
+      <t-sider>sider</t-sider>
+      <t-layout>
+        <t-header>header</t-header>
+        <t-content>content</t-content>
+        <t-footer>footer</t-footer>
+      </t-layout>
+    </t-layout>
   </div>
 </template>
 
