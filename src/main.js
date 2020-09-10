@@ -14,6 +14,11 @@ import Content from "./components/layout/content.vue";
 import Sider from "./components/layout/sider.vue";
 import Footer from "./components/layout/footer.vue";
 import Toast from "./components/toast.vue";
+import Tabs from "./components/tabs/tabs.vue";
+import TabsHeader from "./components/tabs/tabs-header.vue";
+import TabsBody from "./components/tabs/tabs-body.vue";
+import TabsPane from "./components/tabs/tabs-pane.vue";
+import TabsItem from "./components/tabs/tabs-item.vue";
 
 Vue.component("t-icon", Icon);
 Vue.component("t-button", Button);
@@ -27,6 +32,11 @@ Vue.component("t-content", Content);
 Vue.component("t-sider", Sider);
 Vue.component("t-footer", Footer);
 Vue.component("t-toast", Toast);
+Vue.component("t-tabs", Tabs);
+Vue.component("t-tabs-header", TabsHeader);
+Vue.component("t-tabs-body", TabsBody);
+Vue.component("t-tabs-pane", TabsPane);
+Vue.component("t-tabs-item", TabsItem);
 
 // 插件使用
 import plugin from "./plug/plug";

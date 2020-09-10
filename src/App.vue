@@ -83,6 +83,19 @@
     </t-layout>-->
 
     <button @click="showToast">点我</button>
+
+    <t-tabs :selected.sync="selectedTab">
+      <t-tabs-header>
+        <t-tabs-item name="woman" disabled>美女</t-tabs-item>
+        <t-tabs-item name="finance">财经</t-tabs-item>
+        <t-tabs-item name="sports">体育</t-tabs-item>
+      </t-tabs-header>
+      <t-tabs-body>
+        <t-tabs-pane name="woman">美女美女美女</t-tabs-pane>
+        <t-tabs-pane name="finance">财经财经财经</t-tabs-pane>
+        <t-tabs-pane name="sports">体育体育体育</t-tabs-pane>
+      </t-tabs-body>
+    </t-tabs>
   </div>
 </template>
 
@@ -93,6 +106,7 @@ export default {
     return {
       show: true,
       msg: "数据双向绑定",
+      selectedTab: "sports",
     };
   },
   methods: {
